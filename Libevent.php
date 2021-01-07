@@ -9,7 +9,7 @@ use Throwable;
  *
  * @package chaser\reactor
  */
-class Libevent extends ReactorAbstract
+class Libevent extends Reactor
 {
     /**
      * 事件库
@@ -149,7 +149,7 @@ class Libevent extends ReactorAbstract
     /**
      * @inheritDoc
      */
-    public function loop()
+    public function loop(): void
     {
         event_base_loop($this->eventBase);
     }
@@ -157,7 +157,7 @@ class Libevent extends ReactorAbstract
     /**
      * @inheritDoc
      */
-    public function destroy()
+    public function destroy(): void
     {
         event_base_loopbreak($this->eventBase);
     }
