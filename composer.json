@@ -3,9 +3,9 @@
   "description": "基于 libevent 扩展的事件反应器",
   "type": "library",
   "require": {
-    "php": ">=7.4.0",
+    "php": "^8.0",
     "ext-libevent": ">=0.0.1",
-    "7csn/reactor": "dev-master"
+    "7csn/reactor": "^1.0"
   },
   "license": "MIT",
   "authors": [
@@ -16,7 +16,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "chaser\\reactor\\": ""
+      "chaser\\reactor\\": "src/"
     }
   }
 }
